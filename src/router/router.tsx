@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { AuthLayout, RootLayout } from '@/layouts';
 import { AuthForm } from '@/pages';
-import { ROUTES } from '@/constants/routes';
+import { ROUTES } from '@/constants';
 
 export const router = createBrowserRouter([
   {
