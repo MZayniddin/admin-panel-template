@@ -1,1 +1,1 @@
-export { default } from './auth-layout';
+export { AuthLayout } from './auth-layout';

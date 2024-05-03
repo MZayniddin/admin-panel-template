@@ -1,9 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import AuthLayout from '../layouts/auth/auth-layout';
-import AuthForm from '../layouts/auth/auth-form/auth-form';
-import { ROUTES } from '../constants/routes';
-import RootLayout from '../layouts/root/root-layout';
+import { AuthLayout, RootLayout } from '@/layouts';
+import { AuthForm } from '@/pages';
+import { ROUTES } from '@/constants/routes';
 
 export const router = createBrowserRouter([
   {
