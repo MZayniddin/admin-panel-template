@@ -1,4 +1,4 @@
-import { Box, Card, Field } from '@/components';
+import { Box, Button, Card, Field } from '@/components';
 import { AuthCardSubTitle, AuthCardTitle, AuthSection } from './style';
 import { Form } from 'antd';
 
@@ -15,6 +15,8 @@ export const Auth = () => {
         <Form layout="vertical">
           <Field name="email" label="Email" placeholder="example@gmail.com" />
           <Field name="password" label="Password" placeholder="Your password" />
+
+          <Button>Sign in</Button>
         </Form>
       </Card>
     </AuthSection>
