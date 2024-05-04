@@ -5,7 +5,7 @@ import { router } from '@/router';
 function App() {
   return (
     <AppThemeProvider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </AppThemeProvider>
   );
 }

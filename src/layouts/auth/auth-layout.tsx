@@ -6,8 +6,8 @@ export const AuthLayout = () => {
   return isAuthenticated ? (
     <Navigate to="/" />
   ) : (
-    <section>
+    <main>
       <Outlet />
-    </section>
+    </main>
   );
 };

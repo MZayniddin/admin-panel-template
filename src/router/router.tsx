@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import { AuthLayout, RootLayout } from '@/layouts';
-import { AuthForm } from '@/pages';
+import { Auth } from '@/pages';
 import { ROUTES } from '@/constants';
 
 export const router = createBrowserRouter([
@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: ROUTES.auth,
-        element: <AuthForm />,
+        element: <Auth />,
       },
     ],
   },
