@@ -9,9 +9,11 @@ export const AppThemeProvider = ({ children }: PropsWithChildren) => {
 
   return (
     <ThemeProvider theme={styled}>
-      <GlobalStyles theme={{ token, components, algorithm }} />
+      <GlobalStyles />
 
-      <ConfigProvider csp={{ nonce: 'uct-dashboard' }}>{children}</ConfigProvider>
+      <ConfigProvider theme={{ token, components, algorithm }} csp={{ nonce: 'uct-dashboard' }}>
+        {children}
+      </ConfigProvider>
     </ThemeProvider>
   );
 };

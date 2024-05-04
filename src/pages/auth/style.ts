@@ -9,7 +9,7 @@ export const AuthSection = styled.section`
   .ant-card {
     width: 100%;
     max-width: 650px;
-    padding-block: 40px;
+    padding-block: 28px;
   }
 
   .ant-card-body {
@@ -19,14 +19,14 @@ export const AuthSection = styled.section`
 `;
 
 export const AuthCardTitle = styled.h1`
+  color: ${({ theme }) => theme.primary};
   font-size: var(--3xl);
   font-weight: 900;
-  color: ${({ theme }) => theme.primary};
   text-transform: uppercase;
 `;
 
-export const AuthCardSubTitle = styled.p`
-  color: hsl(228.8 15.53% 59.61%);
+export const AuthCardSecondaryText = styled.p`
+  color: ${({ theme }) => theme.gray[500]};
   font-size: var(--base);
   font-weight: bold;
 `;

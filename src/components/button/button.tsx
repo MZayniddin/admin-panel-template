@@ -1,9 +1,10 @@
-import { Button as AntdButton, ButtonProps } from 'antd';
+import { ButtonProps } from 'antd';
+import { StyledButton } from './styles';
 
-export const Button = ({ children }: ButtonProps) => {
+export const Button = ({ children, ...props }: ButtonProps) => {
   return (
-    <AntdButton type="primary" block>
+    <StyledButton type="primary" block {...props}>
       {children}
-    </AntdButton>
+    </StyledButton>
   );
 };
