@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+import { AuthWrapper } from './styles';
 
 export const AuthLayout = () => {
   const isAuthenticated = false;
@@ -6,8 +7,8 @@ export const AuthLayout = () => {
   return isAuthenticated ? (
     <Navigate to="/" />
   ) : (
-    <main>
+    <AuthWrapper>
       <Outlet />
-    </main>
+    </AuthWrapper>
   );
 };

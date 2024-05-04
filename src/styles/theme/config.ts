@@ -1,8 +1,14 @@
 import { ThemeConfig } from 'antd/es/config-provider/context';
+import { TThemeMode } from '@/types';
+import { colors } from './colors';
 
 const controlHeight = 40;
 
-export const components = (): ThemeConfig['components'] => {
+export const components = (mode: TThemeMode): ThemeConfig['components'] => {
+  const color = colors(mode);
+
+  console.log(color);
+
   return {
     Button: {
       controlHeight,
