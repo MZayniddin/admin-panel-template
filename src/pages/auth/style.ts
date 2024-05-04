@@ -8,7 +8,7 @@ export const AuthSection = styled.section`
 
   .ant-card {
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
     padding-block: 40px;
   }
 
