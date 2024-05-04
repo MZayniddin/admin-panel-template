@@ -20,11 +20,13 @@ export const AuthSection = styled.section`
 
 export const AuthCardTitle = styled.h1`
   font-size: var(--3xl);
+  font-weight: 900;
   color: ${({ theme }) => theme.primary};
   text-transform: uppercase;
 `;
 
 export const AuthCardSubTitle = styled.p`
   color: hsl(228.8 15.53% 59.61%);
+  font-size: var(--base);
   font-weight: bold;
 `;

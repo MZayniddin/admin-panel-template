@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
   }
 
   * {
@@ -66,5 +67,50 @@ export const GlobalStyles = createGlobalStyle`
   #root,
   #__next {
     isolation: isolate;
+  }
+
+  @font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-Bold.woff2') format('woff2'),
+      url('/fonts/Nunito-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-Medium.woff2') format('woff2'),
+      url('/fonts/Nunito-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-Regular.woff2') format('woff2'),
+      url('/fonts/Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-ExtraBold.woff2') format('woff2'),
+      url('/fonts/Nunito-ExtraBold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito-SemiBold.woff2') format('woff2'),
+      url('/fonts/Nunito-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
   }
 `;
