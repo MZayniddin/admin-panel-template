@@ -1,4 +1,5 @@
 import { useLangStore } from '@/store';
+import { langOptions } from '@/constants/lang.constants';
 import { TLang } from '@/types';
 import { Select } from 'antd';
 
@@ -9,15 +10,5 @@ export const LangSwitcher = () => {
     setLang(value);
   };
 
-  return (
-    <Select
-      onChange={handleLanguageChange}
-      defaultValue={lang}
-      options={[
-        { value: TLang.UZ, label: 'UZ' },
-        { value: TLang.EN, label: 'EN' },
-        { value: TLang.RU, label: 'RU' },
-      ]}
-    />
-  );
+  return <Select onChange={handleLanguageChange} defaultValue={lang} options={langOptions} />;
 };

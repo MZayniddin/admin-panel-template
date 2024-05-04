@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Form, Input, InputProps } from 'antd';
 import { FormItemProps, Rule } from 'antd/es/form';
 import { ReactNode } from 'react';
@@ -16,12 +17,13 @@ export const Field = ({
   children,
   ...props
 }: TFieldProps) => {
+  const { t } = useTranslation('auth');
   return (
     <Form.Item
       rules={[
         {
           required: isRequired ?? true,
-          message: 'Please fill the field',
+          message: t('formErrors.required'),
         },
         ...(rule ? rule : []),
       ]}

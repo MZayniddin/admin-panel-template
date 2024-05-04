@@ -8,13 +8,13 @@ export const AuthSection = styled.section`
 
   .ant-card {
     width: 100%;
-    max-width: 650px;
+    max-width: 680px;
     padding-block: 28px;
     position: relative;
   }
 
   .ant-card-body {
-    max-width: 440px;
+    max-width: 490px;
     margin: 0 auto;
   }
 `;
@@ -33,6 +33,9 @@ export const AuthCardSecondaryText = styled.p`
 `;
 
 export const AuthCardSettingWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
   position: absolute;
   top: 20px;
   right: 20px;

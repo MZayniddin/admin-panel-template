@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Form } from 'antd';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
-import { Box, Button, Card, Field, LangSwitcher } from '@/components';
+import { Box, Button, Card, Field, LangSwitcher, ThemeSwitcher } from '@/components';
 import { AuthCardSecondaryText, AuthCardSettingWrapper, AuthCardTitle, AuthSection } from './style';
 
 export const Auth = () => {
@@ -25,14 +25,18 @@ export const Auth = () => {
 
         <Form layout="vertical">
           {isSignUp && (
-            <Field name="name" label={t('formLabel.name')} placeholder={'formPlaceholder.name'} />
+            <Field
+              name="name"
+              label={t('formLabel.name')}
+              placeholder={t('formPlaceholder.name')}
+            />
           )}
           <Field name="email" label={t('formLabel.email')} placeholder="example@gmail.com" />
           <Field
             name="password"
             label={t('formLabel.password')}
-            isPassword={true}
             placeholder={t('formPlaceholder.password')}
+            isPassword={true}
           />
 
           <Button htmlType="submit">{t(isSignUp ? 'signUp.title' : 'signIn.title')}</Button>
@@ -44,11 +48,11 @@ export const Auth = () => {
 
         <Box $gap="20px" $justify="center" $mb="20px">
           <Button shape="circle" type="default" block={false}>
-            <FcGoogle size={22} />
+            <FcGoogle size="var(--default-icon-size)" />
           </Button>
 
           <Button shape="circle" type="default" block={false}>
-            <FaFacebookF size={22} color="hsl(217, 99%, 51%)" />
+            <FaFacebookF size="var(--default-icon-size)" color="hsl(217, 99%, 51%)" />
           </Button>
         </Box>
 
@@ -56,11 +60,13 @@ export const Auth = () => {
           <p>{t(isSignUp ? 'signUp.footerText' : 'signIn.footerText')}</p>
 
           <Button type="link" block={false} onClick={handleToggleAuthType}>
-            {t(isSignUp ? 'signUp.title' : 'signIn.title')}
+            {t(isSignUp ? 'signIn.title' : 'signUp.title')}
           </Button>
         </Box>
 
         <AuthCardSettingWrapper>
+          <ThemeSwitcher />
+
           <LangSwitcher />
         </AuthCardSettingWrapper>
       </Card>

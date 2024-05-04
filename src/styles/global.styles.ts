@@ -11,6 +11,8 @@ export const GlobalStyles = createGlobalStyle`
     --2xl: 1.5rem; // 24px
     --3xl: 2rem; // 32px
     --full: 100%;
+
+    --default-icon-size: 1.375rem // 22px
   }
 
   *,
@@ -27,6 +29,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: ${({ theme }) => theme.body};
   }
 
   img,

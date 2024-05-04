@@ -9,5 +9,5 @@ export type TThemeStore = {
   setTheme: (theme: TThemeMode) => void;
 
   themeMode: TThemeMode;
-  setThemeMode: (mode: TThemeMode) => void;
+  setThemeMode: (themeMode: TThemeMode) => void;
 };
