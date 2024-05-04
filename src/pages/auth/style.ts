@@ -10,6 +10,7 @@ export const AuthSection = styled.section`
     width: 100%;
     max-width: 650px;
     padding-block: 28px;
+    position: relative;
   }
 
   .ant-card-body {
@@ -29,4 +30,10 @@ export const AuthCardSecondaryText = styled.p`
   color: ${({ theme }) => theme.gray[500]};
   font-size: var(--base);
   font-weight: bold;
+`;
+
+export const AuthCardSettingWrapper = styled.div`
+  position: absolute;
+  top: 20px;
+  right: 20px;
 `;

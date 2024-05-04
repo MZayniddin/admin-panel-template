@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Form } from 'antd';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
-import { Box, Button, Card, Field } from '@/components';
-import { AuthCardSecondaryText, AuthCardTitle, AuthSection } from './style';
+import { Box, Button, Card, Field, LangSwitcher } from '@/components';
+import { AuthCardSecondaryText, AuthCardSettingWrapper, AuthCardTitle, AuthSection } from './style';
 
 export const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -50,6 +50,10 @@ export const Auth = () => {
             {isSignUp ? 'SIGN IN' : 'SIGN UP'}
           </Button>
         </Box>
+
+        <AuthCardSettingWrapper>
+          <LangSwitcher />
+        </AuthCardSettingWrapper>
       </Card>
     </AuthSection>
   );

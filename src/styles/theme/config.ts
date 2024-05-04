@@ -22,5 +22,9 @@ export const components = (mode: TThemeMode): ThemeConfig['components'] => {
       controlHeight,
       colorBgContainer: color.primaryBg,
     },
+
+    Select: {
+      colorBgContainer: color.primaryBg,
+    },
   };
 };
