@@ -1,8 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-
-:root {
+  :root {
     --ss: 0.5rem; // 8px
     --xs: 0.75rem; // 12px
     --sm: 0.875rem; // 14px

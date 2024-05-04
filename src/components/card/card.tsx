@@ -1,6 +1,9 @@
-import { PropsWithChildren } from 'react';
-import { Card as AntdCard } from 'antd';
+import { Card as AntdCard, CardProps } from 'antd';
 
-export const Card = ({ children }: PropsWithChildren) => {
-  return <AntdCard>{children}</AntdCard>;
+export const Card = ({ children, ...props }: CardProps) => {
+  return (
+    <AntdCard bordered={false} {...props}>
+      {children}
+    </AntdCard>
+  );
 };

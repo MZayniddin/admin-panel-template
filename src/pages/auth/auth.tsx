@@ -1,11 +1,16 @@
-import { AuthCard, AuthCardTitle, AuthSection } from './style';
+import { Box, Card } from '@/components';
+import { AuthCardSubTitle, AuthCardTitle, AuthSection } from './style';
 
 export const Auth = () => {
   return (
     <AuthSection>
-      <AuthCard>
-        <AuthCardTitle>sign in</AuthCardTitle>
-      </AuthCard>
+      <Card>
+        <Box $mb="40px">
+          <AuthCardTitle>sign in</AuthCardTitle>
+
+          <AuthCardSubTitle>Enter your email and password to login</AuthCardSubTitle>
+        </Box>
+      </Card>
     </AuthSection>
   );
 };
