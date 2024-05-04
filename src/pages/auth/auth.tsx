@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Form } from 'antd';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
@@ -7,6 +8,7 @@ import { AuthCardSecondaryText, AuthCardSettingWrapper, AuthCardTitle, AuthSecti
 
 export const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const { t } = useTranslation('auth');
 
   const handleToggleAuthType = () => setIsSignUp(!isSignUp);
 
@@ -14,23 +16,30 @@ export const Auth = () => {
     <AuthSection>
       <Card>
         <Box $mb="32px">
-          <AuthCardTitle>{isSignUp ? 'sign up' : 'sign in'}</AuthCardTitle>
+          <AuthCardTitle>{t(isSignUp ? 'signUp.title' : 'signIn.title')}</AuthCardTitle>
 
           <AuthCardSecondaryText>
-            Enter your email and password to {isSignUp ? 'register' : 'login'}
+            {t(isSignUp ? 'signUp.subTitle' : 'signIn.subTitle')}
           </AuthCardSecondaryText>
         </Box>
 
         <Form layout="vertical">
-          {isSignUp && <Field name="name" label="Name" placeholder="Enter your name" />}
-          <Field name="email" label="Email" placeholder="example@gmail.com" />
-          <Field name="password" label="Password" isPassword={true} placeholder="Your password" />
+          {isSignUp && (
+            <Field name="name" label={t('formLabel.name')} placeholder={'formPlaceholder.name'} />
+          )}
+          <Field name="email" label={t('formLabel.email')} placeholder="example@gmail.com" />
+          <Field
+            name="password"
+            label={t('formLabel.password')}
+            isPassword={true}
+            placeholder={t('formPlaceholder.password')}
+          />
 
-          <Button htmlType="submit">Sign in</Button>
+          <Button htmlType="submit">{t(isSignUp ? 'signUp.title' : 'signIn.title')}</Button>
         </Form>
 
         <Box $justify="center" $m="20px 0">
-          <AuthCardSecondaryText>Or continue with</AuthCardSecondaryText>
+          <AuthCardSecondaryText>{t('continueWith')}</AuthCardSecondaryText>
         </Box>
 
         <Box $gap="20px" $justify="center" $mb="20px">
@@ -44,10 +53,10 @@ export const Auth = () => {
         </Box>
 
         <Box $justify="center" $align="center">
-          <p>{isSignUp ? 'Already have an account?' : "Dont' have an account?"}</p>
+          <p>{t(isSignUp ? 'signUp.footerText' : 'signIn.footerText')}</p>
 
           <Button type="link" block={false} onClick={handleToggleAuthType}>
-            {isSignUp ? 'SIGN IN' : 'SIGN UP'}
+            {t(isSignUp ? 'signUp.title' : 'signIn.title')}
           </Button>
         </Box>
 

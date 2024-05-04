@@ -5,6 +5,6 @@ export enum TLang {
 }
 
 export type TLangStore = {
-  lang: string;
+  lang: TLang;
   setLang: (lang: TLang) => void;
 };
