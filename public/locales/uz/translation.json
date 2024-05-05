@@ -24,5 +24,11 @@
       },
       "authentication": "Autentifikatsiya"
     }
+  },
+
+  "theme": {
+    "light": "Yorqin",
+    "dark": "Tungi",
+    "system": "Tizim"
   }
 }

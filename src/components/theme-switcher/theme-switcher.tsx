@@ -1,7 +1,7 @@
 import { Button } from '@/components';
 import { useThemeStore } from '@/store';
 import { TThemeMode } from '@/types';
-import { getThemeIcon } from './theme-switcher.helpers';
+import { getThemeIcon } from '@/helpers';
 
 export const ThemeSwitcher = () => {
   const { themeMode, setThemeMode, setTheme } = useThemeStore();
