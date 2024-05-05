@@ -4,7 +4,7 @@ import { Breadcrumb } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-export const Home = () => {
+export const Sales = () => {
   const { t } = useTranslation();
 
   const breadcrumbItems = [
@@ -12,7 +12,7 @@ export const Home = () => {
       title: t('menu.dashboard.title'),
     },
     {
-      title: <Link to={ROUTES.root}>{t('menu.dashboard.home')}</Link>,
+      title: <Link to={ROUTES.sales}>{t('menu.dashboard.sales')}</Link>,
     },
   ];
 
@@ -22,7 +22,7 @@ export const Home = () => {
 
       <Box $pt="20px" $gap="20px" $direction="column">
         {/* WARNING: Inline styles only for demo showcase  */}
-        <Card style={{ minHeight: 400 }}>HOME</Card>
+        <Card style={{ minHeight: 400 }}>SALES</Card>
         <Card style={{ minHeight: 400 }}>DEMO CARD</Card>
       </Box>
     </section>

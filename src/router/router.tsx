@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import { AuthLayout, RootLayout } from '@/layouts';
-import { Auth, Home } from '@/pages';
+import { Analytics, Auth, Finance, Home, Sales } from '@/pages';
 import { ROUTES } from '@/constants';
 
 export const router = createBrowserRouter([
@@ -16,6 +16,11 @@ export const router = createBrowserRouter([
   },
   {
     element: <RootLayout />,
-    children: [{ index: true, element: <Home /> }],
+    children: [
+      { index: true, element: <Home /> },
+      { path: ROUTES.sales, element: <Sales /> },
+      { path: ROUTES.analytics, element: <Analytics /> },
+      { path: ROUTES.finance, element: <Finance /> },
+    ],
   },
 ]);

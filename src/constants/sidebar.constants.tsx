@@ -19,15 +19,15 @@ export const menuItems = (t: TFunction): MenuItem[] => [
         key: 'home',
       },
       {
-        label: <Link to={ROUTES.root}>{t('dashboard.sales')}</Link>,
+        label: <Link to={ROUTES.sales}>{t('dashboard.sales')}</Link>,
         key: 'sales',
       },
       {
-        label: <Link to={ROUTES.root}>{t('dashboard.analytics')}</Link>,
+        label: <Link to={ROUTES.analytics}>{t('dashboard.analytics')}</Link>,
         key: 'analytics',
       },
       {
-        label: <Link to={ROUTES.root}>{t('dashboard.finance')}</Link>,
+        label: <Link to={ROUTES.finance}>{t('dashboard.finance')}</Link>,
         key: 'finance',
       },
     ],
