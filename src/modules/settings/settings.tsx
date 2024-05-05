@@ -31,17 +31,17 @@ export const Settings = () => {
     <>
       <SettingsWrapper $hidden={!isSettingsVisible}>
         <Box $gap="4px" $direction="column" $mb="20px">
-          <SettingsPrimaryText $align="center">TEMPLATE CUSTOMIZER</SettingsPrimaryText>
+          <SettingsPrimaryText $align="center">{t('settings.title')}</SettingsPrimaryText>
 
           <SettingsSecondaryText $fontSize="var(--sm)" $align="center">
-            Set preferences that will be cookied for your live preview demonstration.
+            {t('settings.subTitle')}
           </SettingsSecondaryText>
         </Box>
 
         <SettingsBox>
-          <SettingsPrimaryText>Color Scheme</SettingsPrimaryText>
+          <SettingsPrimaryText>{t('settings.settingTheme.title')}</SettingsPrimaryText>
 
-          <SettingsSecondaryText>Overall light or dark presentation.</SettingsSecondaryText>
+          <SettingsSecondaryText>{t('settings.settingTheme.subTitle')}</SettingsSecondaryText>
 
           <Box $gap="8px" $mt="12px">
             {themeModes(t).map(({ name, icon, value }) => (

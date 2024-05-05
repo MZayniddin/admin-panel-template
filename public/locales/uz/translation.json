@@ -30,5 +30,14 @@
     "light": "Yorqin",
     "dark": "Tungi",
     "system": "Tizim"
+  },
+
+  "settings": {
+    "title": "Shablon sozlamalari",
+    "subTitle": "Jonli koʻrish namoyishi uchun saqlanadigan afzalliklarni oʻrnating",
+    "settingTheme": {
+      "title": "Rang sxemi",
+      "subTitle": "Umumiy yorqin yoki qorong'i ko'rsatuv."
+    }
   }
 }

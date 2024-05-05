@@ -30,5 +30,14 @@
     "light": "Light",
     "dark": "Dark",
     "system": "System"
+  },
+
+  "settings": {
+    "title": "TEMPLATE CUSTOMIZER",
+    "subTitle": "Set preferences that will be cookied for your live preview demonstration.",
+    "settingTheme": {
+      "title": "Color Scheme",
+      "subTitle": "Overall light or dark presentation."
+    }
   }
 }
