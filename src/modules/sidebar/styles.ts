@@ -14,9 +14,4 @@ export const SiderbarWrapper = styled(Layout.Sider)`
   .ant-menu {
     height: 100%;
   }
-
-  .ant-menu-item svg,
-  .ant-menu-submenu svg {
-    font-size: var(--sidebar-icon-size, 18px) !important;
-  }
 `;

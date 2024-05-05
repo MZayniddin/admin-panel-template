@@ -6,11 +6,15 @@ export const colors = (mode: TThemeMode) => ({
         body: 'hsl(233, 60%, 6%)',
         primaryBg: 'hsl(218, 46%, 10%)',
         secondaryBg: 'hsl(218, 46%, 10%)',
+        icon: 'hsla(0, 0%, 100%, 0.5)',
+        text: 'hsl(219.38deg 28.57% 43.92%)',
       }
     : {
         body: 'hsl(0, 0%, 98%)',
         primaryBg: 'rgb(255, 255, 255)',
         secondaryBg: 'hsl(0, 0%, 92%)',
+        icon: 'hsla(218, 46%, 10%, 0.5)',
+        text: 'hsl(217.5deg 46.15% 10.2%)',
       }),
   primary: 'hsl(229, 83%, 60%)',
   gray: {

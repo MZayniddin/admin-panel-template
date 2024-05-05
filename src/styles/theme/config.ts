@@ -28,6 +28,11 @@ export const components = (mode: TThemeMode): ThemeConfig['components'] => {
       colorBgContainer: color.primaryBg,
     },
 
+    Menu: {
+      iconSize: 18,
+      itemHoverColor: color.primary,
+    },
+
     Layout: {
       headerBg: color.primaryBg,
       colorBgLayout: color.body,
