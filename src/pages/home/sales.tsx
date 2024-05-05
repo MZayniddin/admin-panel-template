@@ -1,3 +1,3 @@
 export const Home = () => {
-  return <div style={{ height: '200vh' }}>Sales</div>;
+  return <section>HOME</section>;
 };
