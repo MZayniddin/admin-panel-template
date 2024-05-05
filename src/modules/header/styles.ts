@@ -1,9 +1,11 @@
-import { Layout } from 'antd';
 import styled from 'styled-components';
+import { Layout } from 'antd';
 
 export const HeaderWrapper = styled(Layout.Header)`
-  position: 'sticky' !important;
-  top: '0' !important;
-  color: '#fff';
-  background-color: '#4096ff';
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
 `;

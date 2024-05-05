@@ -1,26 +1,35 @@
-import { Layout } from 'antd';
-
-const siderStyle: React.CSSProperties = {
-  textAlign: 'center',
-  lineHeight: '120px',
-  color: '#fff',
-  overflow: 'auto',
-  height: '100vh',
-  position: 'fixed',
-  zIndex: 2,
-  left: 0,
-  top: 0,
-  bottom: 0,
-};
+import { Menu, MenuTheme } from 'antd';
+import { SiderbarWrapper } from './styles';
+import { useThemeStore } from '@/store';
 
 type TSidebarProps = {
   isSidebarCollapsed: boolean;
 };
 
 export const Sidebar = ({ isSidebarCollapsed }: TSidebarProps) => {
+  const { theme } = useThemeStore();
+
   return (
-    <Layout.Sider trigger={null} collapsible collapsed={isSidebarCollapsed} style={siderStyle}>
-      Sidebar
-    </Layout.Sider>
+    <SiderbarWrapper trigger={null} collapsible collapsed={isSidebarCollapsed}>
+      <Menu
+        theme={theme as MenuTheme}
+        mode="inline"
+        defaultSelectedKeys={['1']}
+        items={[
+          {
+            key: '1',
+            label: 'nav 1',
+          },
+          {
+            key: '2',
+            label: 'nav 2',
+          },
+          {
+            key: '3',
+            label: 'nav 3',
+          },
+        ]}
+      />
+    </SiderbarWrapper>
   );
 };

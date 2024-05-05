@@ -1,33 +1,34 @@
-import { Button } from '@/components';
-import { Layout } from 'antd';
+import { Box, Button, LangSwitcher, ThemeSwitcher } from '@/components';
 import { RiMenuUnfold4Line, RiMenuUnfold3Line } from 'react-icons/ri';
-
-// const headerStyle: React.CSSProperties = {
-//   position: 'sticky',
-//   top: 0,
-//   color: '#fff',
-// };
+import { HeaderWrapper } from './styles';
 
 type THeaderProps = {
   isSidebarCollapsed: boolean;
-  toggleSidebarCollapsed: () => void;
+  toggleSidebarCollapse: () => void;
 };
 
-export const Header = ({ isSidebarCollapsed, toggleSidebarCollapsed }: THeaderProps) => {
+export const Header = ({ isSidebarCollapsed, toggleSidebarCollapse }: THeaderProps) => {
   return (
-    <Layout.Header>
+    <HeaderWrapper>
       <Button
         type="text"
+        shape="circle"
         icon={
           isSidebarCollapsed ? (
-            <RiMenuUnfold4Line fontSize="var(--default-icon-size)" />
-          ) : (
             <RiMenuUnfold3Line fontSize={'var(--default-icon-size)'} />
+          ) : (
+            <RiMenuUnfold4Line fontSize={'var(--default-icon-size)'} />
           )
         }
+        onClick={toggleSidebarCollapse}
         block={false}
-        onClick={toggleSidebarCollapsed}
       />
-    </Layout.Header>
+
+      <Box $gap="10px" $align="center">
+        <ThemeSwitcher />
+
+        <LangSwitcher />
+      </Box>
+    </HeaderWrapper>
   );
 };

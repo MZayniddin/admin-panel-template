@@ -21,7 +21,7 @@ export const ThemeSwitcher = () => {
   const ThemeIcon = getThemeIcon(themeMode);
 
   return (
-    <Button shape="circle" onClick={toggleThemeMode}>
+    <Button shape="circle" onClick={toggleThemeMode} block={false}>
       {ThemeIcon}
     </Button>
   );
