@@ -10,6 +10,7 @@ import {
   SettingsWrapper,
   ThemeSwitcherBtn,
 } from './styles';
+import { IoSettingsOutline } from 'react-icons/io5';
 import { Box } from '@/components';
 import { themeModes } from './settings.constants';
 import { TThemeMode } from '@/types';
@@ -28,7 +29,7 @@ export const Settings = () => {
 
   return (
     <>
-      <SettingsWrapper $hidden={isSettingsVisible}>
+      <SettingsWrapper $hidden={!isSettingsVisible}>
         <Box $gap="4px" $direction="column" $mb="20px">
           <SettingsPrimaryText $align="center">TEMPLATE CUSTOMIZER</SettingsPrimaryText>
 
@@ -55,10 +56,12 @@ export const Settings = () => {
           </Box>
         </SettingsBox>
 
-        <SettingsToggleBtn />
+        <SettingsToggleBtn block={false} onClick={toggleSettingsVisibility}>
+          <IoSettingsOutline />
+        </SettingsToggleBtn>
       </SettingsWrapper>
 
-      <SettingsOverlay onClick={toggleSettingsVisibility} />
+      {isSettingsVisible && <SettingsOverlay onClick={toggleSettingsVisibility} />}
     </>
   );
 };

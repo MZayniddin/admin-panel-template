@@ -14,14 +14,13 @@ type TSettingsWrapperProps = {
 export const SettingsWrapper = styled(Sider)<SiderProps & TSettingsWrapperProps>`
   min-width: 450px !important;
   min-height: 100vh;
-  overflow: auto;
   position: fixed !important;
   background: ${({ theme }) => theme.body} !important;
   inset-block: 0;
   right: 0;
   z-index: 100;
   padding: 16px;
-  margin-right: ${({ $hidden }) => $hidden && '-100%'};
+  transform: translateX(${({ $hidden }) => $hidden && '100%'});
 `;
 
 export const SettingsBox = styled(Box)`
@@ -57,10 +56,24 @@ export const ThemeSwitcherBtn = styled(Button)`
 `;
 
 export const SettingsToggleBtn = styled(Button)`
-  position: absolute !important;
-  width: 30px;
-  height: 30px;
-  left: 100%;
-  z-index: 200;
+  height: 50px;
+  position: absolute;
   top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  font-size: var(--2xl);
+  border-radius: 0;
+  border-end-start-radius: 100%;
+  border-start-start-radius: 100%;
+  z-index: 100;
+
+  svg {
+    animation: infinite 4s linear spin;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
