@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
-  minHeight: 120,
+  minHeight: "150vh",
   lineHeight: '120px',
   color: '#fff',
   backgroundColor: '#0958d9',

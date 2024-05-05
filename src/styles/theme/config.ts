@@ -26,5 +26,12 @@ export const components = (mode: TThemeMode): ThemeConfig['components'] => {
     Select: {
       colorBgContainer: color.primaryBg,
     },
+
+    Layout: {
+      headerBg: color.secondaryBg,
+      headerHeight: 55,
+      headerPadding: '10px 20px',
+      siderBg: color.secondaryBg,
+    },
   };
 };

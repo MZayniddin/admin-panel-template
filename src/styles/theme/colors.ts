@@ -5,7 +5,7 @@ export const colors = (mode: TThemeMode) => ({
     ? {
         body: 'hsl(233, 60%, 6%)',
         primaryBg: 'hsl(218, 46%, 10%)',
-        secondaryBg: 'hsl(224, 35%, 15%)',
+        secondaryBg: 'hsl(218, 46%, 10%)',
       }
     : {
         body: 'hsl(0, 0%, 98%)',
