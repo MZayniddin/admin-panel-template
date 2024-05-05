@@ -1,16 +1,42 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Form } from 'antd';
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebookF } from 'react-icons/fa';
+import { message } from '@/providers';
+import { ROUTES } from '@/constants';
 import { Box, Button, Card, Field, LangSwitcher, ThemeSwitcher } from '@/components';
 import { AuthCardSecondaryText, AuthCardSettingWrapper, AuthCardTitle, AuthSection } from './style';
 
 export const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [authForm] = Form.useForm();
+  const authFormValues = Form.useWatch([], authForm);
+  const navigate = useNavigate();
   const { t } = useTranslation('auth');
 
   const handleToggleAuthType = () => setIsSignUp(!isSignUp);
+
+  const handleSubmitForm = () => {
+    const data = {
+      ...authFormValues,
+    };
+
+    if (isSignUp) {
+      // ? request for sign up to backend
+      console.log(data);
+
+      message.success(t('message.signUpSuccess'));
+    } else {
+      // ? request for sign in to backend
+      console.log(data);
+
+      message.success(t('message.signInSuccess'));
+    }
+
+    navigate(ROUTES.root);
+  };
 
   return (
     <AuthSection>
@@ -23,7 +49,7 @@ export const Auth = () => {
           </AuthCardSecondaryText>
         </Box>
 
-        <Form layout="vertical">
+        <Form layout="vertical" onFinish={handleSubmitForm} form={authForm} autoComplete="off">
           {isSignUp && (
             <Field
               name="name"

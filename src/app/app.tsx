@@ -1,5 +1,5 @@
 import { RouterProvider } from 'react-router-dom';
-import { AppThemeProvider } from '@/providers';
+import { AppThemeProvider, MessageProvider } from '@/providers';
 import { router } from '@/router';
 import { useLang } from '@/hooks';
 
@@ -8,7 +8,9 @@ export const App = () => {
 
   return (
     <AppThemeProvider>
-      <RouterProvider router={router} />
+      <MessageProvider>
+        <RouterProvider router={router} />
+      </MessageProvider>
     </AppThemeProvider>
   );
 };
