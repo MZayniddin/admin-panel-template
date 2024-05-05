@@ -1,5 +1,5 @@
 import { useLangStore } from '@/store';
-import { langOptions } from '@/constants/lang.constants';
+import { langOptions } from '@/constants';
 import { TLang } from '@/types';
 import { Select } from 'antd';
 

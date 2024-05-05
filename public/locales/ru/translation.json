@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "dashboard": {
+      "title": "Панель управления",
+      "home": "Главная",
+      "sales": "Продажи",
+      "analytics": "Аналитика",
+      "finance": "Финансы"
+    },
+
+    "apps": {
+      "title": "ПРИЛОЖЕНИЯ",
+      "chat": "Чат",
+      "mailbox": "Почта",
+      "notes": "Заметки"
+    },
+
+    "userAndPages": {
+      "title": "ПОЛЬЗОВАТЕЛИ И СТРАНИЦЫ",
+      "users": {
+        "title": "Пользователи",
+        "profile": "Профиль",
+        "accountSettings": "Настройки аккаунта"
+      },
+      "authentication": "Аутентификация"
+    }
+  }
+}

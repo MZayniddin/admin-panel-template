@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
+import { useThemeStore } from '@/store';
 import { Menu, MenuTheme } from 'antd';
 import { SiderbarWrapper } from './styles';
-import { useThemeStore } from '@/store';
+import { menuItems } from '@/constants';
 
 type TSidebarProps = {
   isSidebarCollapsed: boolean;
@@ -8,27 +10,16 @@ type TSidebarProps = {
 
 export const Sidebar = ({ isSidebarCollapsed }: TSidebarProps) => {
   const { theme } = useThemeStore();
+  const { t } = useTranslation('', { keyPrefix: 'menu' });
 
   return (
     <SiderbarWrapper trigger={null} collapsible collapsed={isSidebarCollapsed}>
       <Menu
         theme={theme as MenuTheme}
         mode="inline"
-        defaultSelectedKeys={['1']}
-        items={[
-          {
-            key: '1',
-            label: 'nav 1',
-          },
-          {
-            key: '2',
-            label: 'nav 2',
-          },
-          {
-            key: '3',
-            label: 'nav 3',
-          },
-        ]}
+        defaultSelectedKeys={['home']}
+        defaultOpenKeys={['dashboard']}
+        items={menuItems(t)}
       />
     </SiderbarWrapper>
   );

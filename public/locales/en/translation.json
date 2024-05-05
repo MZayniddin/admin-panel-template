@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "dashboard": {
+      "title": "Dashboard",
+      "home": "Home",
+      "sales": "Sales",
+      "analytics": "Analytics",
+      "finance": "Finance"
+    },
+
+    "apps": {
+      "title": "APPS",
+      "chat": "Chat",
+      "mailbox": "Mailbox",
+      "notes": "Notes"
+    },
+
+    "userAndPages": {
+      "title": "USER AND PAGES",
+      "users": {
+        "title": "Users",
+        "profile": "Profile",
+        "accountSettings": "Account Settings"
+      },
+      "authentication": "Authentication"
+    }
+  }
+}

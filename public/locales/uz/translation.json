@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "dashboard": {
+      "title": "Boshqaruv Paneli",
+      "home": "Bosh sahifa",
+      "sales": "Savdo",
+      "analytics": "Analitika",
+      "finance": "Moliya"
+    },
+
+    "apps": {
+      "title": "DASTURLAR",
+      "chat": "Chat",
+      "mailbox": "Elektron pochta",
+      "notes": "Izohlarni yozish"
+    },
+
+    "userAndPages": {
+      "title": "FOYDALANUVCHILAR VA SAHIFALAR",
+      "users": {
+        "title": "Foydalanuvchilar",
+        "profile": "Profil",
+        "accountSettings": "Profil sozlamalari"
+      },
+      "authentication": "Autentifikatsiya"
+    }
+  }
+}
