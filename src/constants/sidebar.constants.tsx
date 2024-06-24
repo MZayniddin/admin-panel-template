@@ -33,6 +33,29 @@ export const menuItems = (t: TFunction): MenuItem[] => [
     ],
   },
   {
+    label: t('dashboard.title'),
+    key: 'dashboard',
+    icon: <RiDashboardHorizontalFill />,
+    children: [
+      {
+        label: <Link to={ROUTES.root}>{t('dashboard.home')}</Link>,
+        key: 'home',
+      },
+      {
+        label: <Link to={ROUTES.sales}>{t('dashboard.sales')}</Link>,
+        key: 'sales',
+      },
+      {
+        label: <Link to={ROUTES.analytics}>{t('dashboard.analytics')}</Link>,
+        key: 'analytics',
+      },
+      {
+        label: <Link to={ROUTES.finance}>{t('dashboard.finance')}</Link>,
+        key: 'finance',
+      },
+    ],
+  },
+  {
     key: 'apps',
     label: t('apps.title'),
     type: 'group',

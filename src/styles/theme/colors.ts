@@ -20,6 +20,7 @@ export const colors = (mode: TThemeMode) => ({
       }),
   primary: 'hsl(229, 83%, 60%)',
   gray: {
+    100: 'hsl(220, 9%, 76%)',
     300: 'hsl(220, 9%, 46%)',
     500: 'hsl(229, 16%, 60%)',
   },
