@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useThemeStore } from '@/store';
 import {
+  CloseButton,
   SettingsBox,
   SettingsOverlay,
   SettingsPrimaryText,
@@ -9,8 +10,9 @@ import {
   SettingsToggleBtn,
   SettingsWrapper,
   ThemeSwitcherBtn,
+  ThemeSwitchersWrapper,
 } from './styles';
-import { IoSettingsOutline } from 'react-icons/io5';
+import { IoSettingsOutline, IoClose } from 'react-icons/io5';
 import { Box } from '@/components';
 import { themeModes } from './settings.constants';
 import { TThemeMode } from '@/types';
@@ -43,7 +45,7 @@ export const Settings = () => {
 
           <SettingsSecondaryText>{t('settings.settingTheme.subTitle')}</SettingsSecondaryText>
 
-          <Box $gap="8px" $mt="12px">
+          <ThemeSwitchersWrapper>
             {themeModes(t).map(({ name, icon, value }) => (
               <ThemeSwitcherBtn
                 key={crypto.randomUUID()}
@@ -53,12 +55,16 @@ export const Settings = () => {
                 {icon} {name}
               </ThemeSwitcherBtn>
             ))}
-          </Box>
+          </ThemeSwitchersWrapper>
         </SettingsBox>
 
         <SettingsToggleBtn block={false} onClick={toggleSettingsVisibility}>
           <IoSettingsOutline />
         </SettingsToggleBtn>
+
+        <CloseButton block={false} type="default" onClick={toggleSettingsVisibility}>
+          <IoClose />
+        </CloseButton>
       </SettingsWrapper>
 
       {isSettingsVisible && <SettingsOverlay onClick={toggleSettingsVisibility} />}

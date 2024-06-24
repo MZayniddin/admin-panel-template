@@ -12,14 +12,15 @@ type TSettingsWrapperProps = {
 };
 
 export const SettingsWrapper = styled(Sider)<SiderProps & TSettingsWrapperProps>`
-  min-width: 450px !important;
+  max-width: 450px !important;
+  width: 100% !important;
   min-height: 100vh;
   position: fixed !important;
   background: ${({ theme }) => theme.body} !important;
   inset-block: 0;
   right: 0;
   z-index: 100;
-  padding: 16px;
+  padding: 28px 16px;
   transform: translateX(${({ $hidden }) => $hidden && '100%'});
 `;
 
@@ -50,9 +51,27 @@ export const SettingsOverlay = styled.div`
   z-index: 50;
 `;
 
+export const ThemeSwitchersWrapper = styled.div`
+  display: flex;
+  margin-top: 12px;
+  gap: 8px;
+
+  @media screen and (max-width: 470px) {
+    flex-direction: column;
+  }
+`;
+
 export const ThemeSwitcherBtn = styled(Button)`
   gap: 8px;
   padding-inline: 10px;
+`;
+
+export const CloseButton = styled(Button)`
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: var(--2xl);
+  padding: 6px;
 `;
 
 export const SettingsToggleBtn = styled(Button)`
