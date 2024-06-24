@@ -15,6 +15,8 @@ export const GlobalStyles = createGlobalStyle`
     --default-icon-size: 1.375rem // 22px
   }
 
+  /* RESET CSS */
+
   *,
   *::before,
   *::after {
@@ -71,6 +73,33 @@ export const GlobalStyles = createGlobalStyle`
   #__next {
     isolation: isolate;
   }
+
+  /* SCROLLBAR CSS */
+
+  @media (orientation: landscape) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 12px;
+      background-color: ${({ theme }) => theme.body};
+    }
+  }
+
+  @media (orientation: landscape) {
+    ::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      background-color: ${({ theme }) => theme.primary};
+      border: 2px solid  ${({ theme }) => theme.primaryBg};
+    }
+  }
+
+  @media (orientation: landscape) {
+    ::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background-color: ${({ theme }) => theme.primaryBg};
+    }
+  }
+
+  /* FONTS */
 
   @font-face {
     font-family: 'Nunito';
